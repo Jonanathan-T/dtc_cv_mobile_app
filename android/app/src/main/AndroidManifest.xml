@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="dtc_first_app"
+        android:label="CV Mobile app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

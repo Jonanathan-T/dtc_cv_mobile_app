@@ -1,24 +1,14 @@
+import 'package:device_preview_minus/device_preview_minus.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+
+import 'app/app.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        scaffoldBackgroundColor: const Color(0xff101630),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => const App(),
+    ),
+  );
 }
