@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../entities/information.dart';
 
-class ExperienceSection extends StatelessWidget {
-  ExperienceSection({super.key});
+class ExperienceSection extends StatefulWidget {
+  const ExperienceSection({super.key});
+
+  @override
+  State<ExperienceSection> createState() => _ExperienceSectionState();
+}
+
+class _ExperienceSectionState extends State<ExperienceSection> {
   final experiences = <Information>[
     Information(
       title:

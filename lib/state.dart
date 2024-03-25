@@ -50,7 +50,41 @@ class _MyWidgetState extends State<MyStateFullWidget> {
                     text = value.isEmpty ? "Saisir un text" : value;
                   });
                 },
-                keyboardType: TextInputType.datetime,
+                keyboardType: TextInputType.text,
+              ),
+              GestureDetector(
+                onTap: () => textController.text.isNotEmpty
+                    ? showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: const Text(
+                              "Voulez vous ajouter",
+                            ),
+                            content: Text(textController.text),
+                            actions: const [
+                              Text("Valider"),
+                            ],
+                          );
+                        },
+                      )
+                    : null,
+                child: Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.symmetric(vertical: 10.0),
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple.shade800,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: const Center(
+                      child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.0),
+                    child: Text(
+                      "Ajouter",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
+                ),
               ),
             ],
           ),

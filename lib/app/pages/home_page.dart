@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 children: [
                   IntroductionSection(),
-                  ExperienceSection(),
+                  const ExperienceSection(),
                   FormationSection(),
                   SkillsSection(),
                 ],
