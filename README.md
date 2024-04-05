@@ -1,6 +1,6 @@
-# dtc_first_app
+# DTC CV Application
 
-A new Flutter project.
+CV Mobile est une application representant mon CV, mes competences et mes experiences dans un format leger d'une application mobile
 
 ## Getting Started
 
@@ -17,9 +17,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Ressources
 
-<a target="_blank" href="https://icons8.com/icon/106564/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+All icon used in this app is by <a target="_blank" href="https://icons8.com">Icons8</a>
 <br>
-<a target="_blank" href="https://icons8.com/icon/85141/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 
 Profil linkedin: <https://www.linkedin.com/in/jonathan-totozamany-2505b91a1>
 Profil github: <https://github.com/Jonanathan-T>
