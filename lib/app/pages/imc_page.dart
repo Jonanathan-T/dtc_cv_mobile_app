@@ -82,28 +82,9 @@ class _ImcPageState extends State<ImcPage> {
             const SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                final result = resultImc(calculeImc());
-                showDialog(
-                  context: context,
-                  builder: ((context) {
-                    return SimpleDialog(
-                      title: SizedBox(
-                        height: MediaQuery.sizeOf(context).height / 4,
-                        child: Column(
-                          children: [
-                            Text(
-                              "Votre IMC: ${result.imc}",
-                              style: const TextStyle(fontSize: 24.0),
-                            ),
-                            Text(result.message),
-                          ],
-                        ),
-                      ),
-                      titleTextStyle: const TextStyle(color: Colors.white),
-                      backgroundColor: result.color,
-                    );
-                  }),
-                );
+                if (!validation()) {
+                  _showDialogResult();
+                }
               },
               child: Button(
                 decoration: BoxDecoration(
@@ -188,5 +169,31 @@ class _ImcPageState extends State<ImcPage> {
       return true;
     }
     return false;
+  }
+
+  void _showDialogResult() {
+    final result = resultImc(calculeImc());
+
+    showDialog(
+      context: context,
+      builder: ((context) {
+        return SimpleDialog(
+          title: SizedBox(
+            height: MediaQuery.sizeOf(context).height / 4,
+            child: Column(
+              children: [
+                Text(
+                  "Votre IMC: ${result.imc}",
+                  style: const TextStyle(fontSize: 24.0),
+                ),
+                Text(result.message),
+              ],
+            ),
+          ),
+          titleTextStyle: const TextStyle(color: Colors.white),
+          backgroundColor: result.color,
+        );
+      }),
+    );
   }
 }
